@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `Course_work_db`.`User_enter_and_exit` ;
 
 CREATE TABLE IF NOT EXISTS `Course_work_db`.`User_enter_and_exit` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `enter` DATETIME NULL,
   `exit` DATETIME NULL,
   `user_id` INT NOT NULL,
