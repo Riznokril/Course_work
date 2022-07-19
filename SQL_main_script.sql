@@ -41,19 +41,15 @@ DROP TABLE IF EXISTS `Course_work_db`.`User_enter_and_exit` ;
 
 CREATE TABLE IF NOT EXISTS `Course_work_db`.`User_enter_and_exit` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `enter` DATETIME NULL,
-  `exit` DATETIME NULL,
+  `open_close` VARCHAR(1) NULL,
+  `time` datetime not null,
   `user_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `user_id`),
-  INDEX `fk_User_enter_and_exit_User_idx` (`user_id` ASC) VISIBLE,
-  CONSTRAINT `fk_User_enter_and_exit_User`
-    FOREIGN KEY (`user_id`)
-    REFERENCES `mydb`.`User` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`)
+)
+
 ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET FOREIGN_KEY_CHECKS=0;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
